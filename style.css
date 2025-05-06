@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Занимает всю высоту экрана */
+}
+
+.image-container {
+    width: 100%; /* Контейнер на всю ширину */
+    display: flex;
+    justify-content: center; /* Центрирование изображения в контейнере */
+    align-items: center; /* Центрирование по вертикали (если контейнер больше высоты изображения) */
+    margin-bottom: 20px; /* Отступ между изображениями */
+}
+
+img {
+    max-width: 90%; /* Максимальная ширина изображения относительно экрана */
+    max-height: 90vh; /* Максимальная высота изображения относительно высоты экрана */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    object-fit: contain; /* Вписывает изображение в контейнер с сохранением пропорций */
+}
+
+/* Для последнего изображения убрать отступ снизу */
+.image-container:last-child {
+    margin-bottom: 0;
+}
